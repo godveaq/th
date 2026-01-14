@@ -1,0 +1,67 @@
+:root {
+  //Initialize theme variables
+  --app-background: url("https://przemec.github.io/Novum/assets/images/app_min.png");
+  --main-color: #992727;
+  --main-color-selected: #aa2f2f;
+  --main-color-semitransparent: #d4393926;
+  --main-color-semitransparent-selected: #d336364d;
+  --accent-color: #fd9fa0;
+  --accent-color-semitransparent: #fca7a918;
+  --accent-saturated: #fd7a7c;
+  --accent-desaturated: #b47a7a;
+  --button-text: #dddddd;
+  --button-text-selected: #ffffff;
+  --profile-background: url("https://przemec.github.io/Novum/assets/images/profile_min.png");
+  --profile-activity: #6d1515;
+  --scroll-thumb-color: #a54b4b;
+}
+
+//Background
+body::after {
+  background-image: var(--app-background) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: left top;
+  z-index: -90;
+}
+
+//Remove main gray background colors
+[class*="-appMount"],
+[class*="-app"],
+[class*="-chat"],
+[class*="-chatContent"],
+[class*="-bg"] {
+  background: transparent !important;
+}
+
+//bar at the top of the app
+#app-mount > [class*="typeMacOS"],
+#app-mount > [class*="typeWindows"] {
+  height: 18px;
+  margin-top: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 4px;
+}
+
+[class*="-chat"] > [class*="header"] + [class*="-content"],
+[class*="-chat"] > [class*="-content"] > div {
+  background: transparent !important;
+}
+
+[class*="-wrapper"] {
+  border: none;
+}
+
+[class*="-sidebar"] > nav > div:first-child,
+[class*="-base"] > [class*="-content"] > :nth-child(2) section[class*="-container"],
+[class*="-base"] > [class*="-content"] > :nth-last-child(2) section[class*="-container"] {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
